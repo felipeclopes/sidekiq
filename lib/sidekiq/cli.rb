@@ -330,6 +330,10 @@ module Sidekiq
           opts[:logfile] = arg
         end
 
+        o.on '-p', '--profile', "Profile sidekiq execution" do |arg|
+          opts[:profile] = true
+        end
+
         o.on '-P', '--pidfile PATH', "path to pidfile" do |arg|
           opts[:pidfile] = arg
         end
